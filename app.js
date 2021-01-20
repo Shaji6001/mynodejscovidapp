@@ -45,13 +45,18 @@ app.get('/viewall',async(req,res)=>{
    
     try
     {
-        var result = await patientModel.find(req.body, ()=>{
+      patientModel.find(req.body, (error,data)=>{
+       if (error){
+         throw Error
+       }else{
+         res.json(data)
+       }
+      })  
             
-        })
-        res.json(result);
+        
     }
   catch(error){
-
+     res.status(500).send(error)
   }
  })
 
