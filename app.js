@@ -55,8 +55,7 @@ app.get('/viewall', async(req, res)=>{
        }else{
          res.json(data)
        }
-      })  
-            
+      })        
         
     }
   catch(error){

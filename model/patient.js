@@ -6,9 +6,9 @@ var patientSchema = new mongoose.Schema(
         patientName:{type:String},
         patientAddress:{type:String},
         doctorName:{type:String},
-        symtoms:{type:String},
+        symptoms:{type:String},
         patientPhoneno:{type:Number},
-        emailID:{type:String},
+        emailId:{type:String},
         patientCode:{type:String}
 
     }
