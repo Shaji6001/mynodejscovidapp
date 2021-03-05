@@ -17,10 +17,10 @@ app.post('/add', async(req,res)=>{
     try
     {
       var data = req.body;
-      var patientData= new patientModel(data);
+      var patientData= new patientModel(req.body);
 
       var result = await patientData.save();
-      console.log(result);
+      console.log(data);
       res.json(result);
 
     }
